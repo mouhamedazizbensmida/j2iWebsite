@@ -1,0 +1,316 @@
+:root{
+    margin: 0;
+}
+/* Navbar Section */
+.navbar-nav {
+    display: flex;
+    gap: 20px; 
+    }
+
+.navbar .container-fluid li {
+    display: flex;
+    align-items: center; 
+}
+@media (max-width: 992px) {
+    .navbar .container-fluid{
+        display: flex;
+        flex-direction: row-reverse
+    }
+}
+
+/* Banner Section  */
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Full viewport height */
+    background-image: url('../Images/Banner_Image.png'); /* Path to your background image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating of the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Text color */
+  }
+  
+  /* Style the overlay text */
+  .text-overlay-Banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: rgba(94, 94, 94, 0.5); 
+    
+    /* Semi-transparent background for readability */
+    border-radius: 10px;
+    max-width: 90%; /* Ensure the overlay does not exceed the container width */
+  }
+  
+  /* Responsive font sizes */
+  .text-overlay-Banner h1 {
+    margin: 0;
+    font-size: 4.5vmin; /* Font size relative to viewport height */
+  }
+  
+  .text-overlay-Banner p {
+    margin: 0;
+    font-size: 1.5vmin; /* Font size relative to viewport height */
+  }
+  
+  /* Optional: Ensure the text overlay scales well on very small screens */
+  @media (max-width: 576px) {
+    .text-overlay-Banner h1 {
+      font-size: 4vw; /* Font size relative to viewport width */
+    }
+  
+    .text-overlay-Banner p {
+      font-size: 2vw; /* Font size relative to viewport width */
+    }
+  }
+.text-overlay-Banner h1 span  {font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, serif;font-weight: bold;}
+
+/* Main Section  */
+.main_Container {
+    margin-top: 2%;
+    position: relative;
+    width: 80%; /* Adjust width based on your image */
+    font-family: Arial, sans-serif;
+    background-color: white;/* Adjust height based on your image */
+
+}
+/* About j2i Section  */
+.About_Container {
+    padding-left: 5vh;
+    position: relative; /* Ensure that the text-overlay-About-Section is positioned relative to About_Container */
+}
+
+.text-overlay-About-Section {
+    text-align: justify; 
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    border-radius: 20px 0px 80px 20px !important;
+    background: rgba(51, 83, 112, 0.77);
+    color: white;
+    padding: 10px;
+    width: 50%; /* Adjust width of the text container */
+    border-radius: 5px;
+}
+
+.text-overlay-About-Section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-overlay-About-Section span {
+    color: #f7d937; /* Yellow color for "We Are" */
+}
+
+.text-overlay-About-Section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.About_Container .logo {
+    margin-bottom: -5vh;
+}
+
+/* Media Query for screens with max-width 699px */
+@media (max-width: 699px) {
+    .About_Container{
+        display: flex;
+        justify-items: center;
+        flex-direction: column-reverse;
+    padding: 0;}
+    .text-overlay-About-Section {
+        position: static; /* Reset positioning */
+        width: 100%; /* Full width for mobile */
+        border-radius: 5px; /* Reset border-radius */
+        margin-bottom: 10px; /* Add space below text */
+        padding: 20px; /* Adjust padding as needed */
+    }
+
+    .About_Container .logo {
+        margin-left: 25%;
+        margin-bottom: 0; /* Reset margin */
+        display: block; /* Ensure logo is displayed as block */
+        width: 50%; /* Ensure logo takes full width */
+        margin-top: 10px; /* Add space above the logo */
+    }
+}
+
+
+/* Departement Section */
+
+.Departement_Container{display: flex;
+align-items: start;
+flex-direction: column;
+}
+.Departement_Container span{
+    margin-left: 0;
+    color: #1262AE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22.426px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.897px;
+    text-transform: capitalize;
+}
+.Departement_Container .logo {
+    margin-top: 2%;
+    width: 100%;
+    height: 80%;
+}
+
+/* Our Values Section */
+.Values_Container{
+margin-top: 5%;
+display: flex;
+flex-direction: column;
+align-items: start;
+}
+.title{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%; /* 72px */
+}
+.title .part1{
+    color: #1262AE;
+}
+.title .part2{
+    color: #E2DD68;
+}
+.text{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    text-align: justify;  /* 27px */
+    margin-bottom: 2%;
+    
+}
+.Values_Container .card{
+    border: none;
+    border-left: 2px solid #EEE623;
+}
+.Values_Container .card .card-title{
+    display: flex;
+    align-items: start;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 150%;
+    color: #1262AE; 
+}
+.Values_Container .card .card-text{
+    display: flex;
+    align-items: start;
+    text-align: justify;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    margin-bottom: 2%;
+}
+/* Our Sponsors */
+.Our_Sponsors_Container{
+    margin-top: 3%;
+    text-align: justify;
+}
+.carousel-item img {
+    max-height: 20vh !important; /* Adjust this value to change the logo size */
+    margin: 0 5px; /* Adds spacing between logos */
+  }
+  
+  /* Adjust the position of the control icons */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(73, 73, 73, 0.225); /* Optional, changes the color of the control icons */
+    border-radius: 50%;
+  }
+  /* Footer  */
+  footer {
+    background: linear-gradient(to right, #0b4f94, #1fa2ff);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    flex: 1;
+    /* min-width: 500px; */
+    margin-right: 5%;
+}
+
+.footer-logo img {
+    width: 80px;
+}
+
+.footer-description {
+    margin-top: 10px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-top: 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
