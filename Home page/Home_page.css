@@ -11,6 +11,8 @@
     display: flex;
     align-items: center; 
 }
+
+/* Responsive adjustments */
 @media (max-width: 992px) {
     .navbar .container-fluid{
         display: flex;
@@ -60,7 +62,7 @@
     font-size: 1.5vmin; /* Font size relative to viewport height */
   }
   
-  /* Optional: Ensure the text overlay scales well on very small screens */
+/* Responsive adjustments */
   @media (max-width: 576px) {
     .text-overlay-Banner h1 {
       font-size: 4vw; /* Font size relative to viewport width */
@@ -81,6 +83,8 @@
     background-color: white;/* Adjust height based on your image */
 
 }
+
+/* Responsive adjustments */
 @media (max-width: 891px) {
     .main_Container{width: 95% !important;}
 }
@@ -122,7 +126,7 @@
     margin-bottom: -5vh;
 }
 
-/* Media Query for screens with max-width 699px */
+/* Responsive adjustments */
 @media (max-width: 699px) {
     .About_Container{margin-top: 5%;}
     .text-overlay-About-Section{
@@ -158,6 +162,7 @@ flex-direction: column;
     width: 100%;
     height: 80%;
 }
+/* Responsive adjustments */
 @media (max-width: 891px) {
     .Departement_Container .logo{height: 6cm;}
 }
@@ -175,7 +180,7 @@ align-items: start;
     font-size: 30px;
     font-style: normal;
     font-weight: bold;
-    line-height: 150%; /* 72px */
+     /* 72px */
 }
 .title .part1{
     color: #1262AE;
@@ -221,6 +226,7 @@ align-items: start;
     line-height: 150%;
     margin-bottom: 2%;
 }
+/* Responsive adjustments */
 @media (max-width: 891px) {
     p {font-size: 1.7vh !important;}
     h5{font-size: 2vh !important;}
@@ -231,8 +237,6 @@ align-items: start;
 
 /* Our Sponsors */
 .Our_Sponsors_Container{
-    margin-top: 3%;
-    margin-bottom: 3%;
     text-align: justify;
 }
 .carousel-item img {
@@ -245,6 +249,8 @@ align-items: start;
     background-color: rgba(73, 73, 73, 0.225); /* Optional, changes the color of the control icons */
     border-radius: 50%;
   }
+
+/* Responsive adjustments */
   @media (max-width: 800px) {
     .carousel-item img {
         max-height: 13vh !important;
@@ -394,7 +400,7 @@ footer p{
     display: block; 
   }
 
-/* Flexbox layout for screens smaller than 1008px */
+/* Responsive adjustments */
 @media (max-width: 1207px) {
     .footer-widget-area {
       display: flex;
@@ -422,7 +428,6 @@ footer p{
     }
   }
   
-/* Flexbox layout for screens smaller than 800px */
 @media (max-width: 800px) {
     .footer-widget-area {
       display: flex;
@@ -438,15 +443,225 @@ footer p{
     }
   
     .footer-widget-area .col-md-3:nth-child(2) {
-      flex: 1 0 60%; /* Second item takes 70% width */
+      flex: 1 0 65%; /* Second item takes 70% width */
     }
   
     .footer-widget-area .col-md-3:nth-child(3) {
-      flex: 1 0 40%; /* Third item takes 30% width */
+      flex: 1 0 35%; /* Third item takes 30% width */
     }
   
     .footer-widget-area .col-md-3:nth-child(4) {
       flex: 1 0 100%; /* Fourth item takes full width */
     }
   }
-  
+
+/* Club Event */
+
+.club-events, .club-departments {
+    text-align: start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.event-card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.event-card img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.event-details h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.event-details p {
+    margin: 0 0 20px;
+    color: #666;
+}
+
+.rsvp-btn {
+    background-color: #00b15e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    align-self: flex-end;
+}
+.club-events .event-card{
+    margin-top: 5%;
+}
+
+/* Club Departement */
+.club-departments{
+    margin-top: 5%;
+}
+.departments {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.department {
+    width: 23%;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3vh;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensures the overlay is properly contained */
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.img-container:hover .overlay {
+    opacity: 1; /* Show the overlay and text on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .department {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .department {
+        width: 100%;
+    }
+}
+/* Contact Section  */
+
+.contact-form {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.form-section {
+    padding: 40px;
+    flex: 1;
+}
+.form-section h1 {
+    font-size: 3em;
+    color: #0e4fa8;
+}
+.form-section h1 span {
+    color: #E2DD68;
+}
+form {
+    margin-top: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group textarea {
+    height: 150px;
+    resize: none;
+}
+.submit-btn {
+    width: 70%;
+    background-color: #E2DD68;
+    color: #0e4fa8;
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: #E2DD68;
+}
+.image-section {
+    background-image: url('../Images/Isamm_Location.png');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+            .contact-form {
+                flex-direction: column;
+            }
+            .image-section {
+                display: none; /* Hide image section */
+            }
+            .form-section {
+                width: 100%; /* Form takes full width */
+                padding: 20px;
+            }
+}
+
+
+/* Initial state */
+.section-to-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Triggered animation state */
+.section-to-animate.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
