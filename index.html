@@ -27,7 +27,6 @@
                 opacity: 1; /* Fully visible */
             }
         </style>
-         <!-- End Jequry Animation -->
       </head>
     
   <body>
@@ -237,23 +236,23 @@
        <!-- Contact Section -->
        <div class="contact-form section">
         <div class="form-section">
-          <span class="title">
-            <span class="part1">Contact</span>  
-            <span class="part2">j2i</span> 
-          </span>
-            <form action="#">
+            <span class="title">
+                <span class="part1">Contact</span>  
+                <span class="part2">j2i</span> 
+            </span>
+            <form action="https://formsubmit.co/azizbensmida0@gmail.com" method="POST" id="contactForm">
                 <div class="form-group">
-                    <input type="email" placeholder="Email address">
+                    <input type="email" name="email" id="email" placeholder="Your Email Address" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Subject">
+                    <input type="text"  name="subject" id="subject" placeholder="Subject" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Message"></textarea>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
                 </div>
                 <span class="title">
-                <button class="submit-btn part1">SEND</button>
-              </span>
+                    <button type="submit" class="submit-btn part1">SEND</button>
+                </span>
             </form>
         </div>
         <div class="image-section"></div>
